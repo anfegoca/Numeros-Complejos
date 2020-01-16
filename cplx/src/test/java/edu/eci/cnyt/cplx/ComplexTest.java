@@ -19,11 +19,15 @@ import static org.junit.Assert.*;
 public class ComplexTest {
     Complex a;
     Complex b; 
+    Complex z;
+    Complex w;
     
     @Before
     public void setUp() {
          a= new Complex(2,2);
          b = new Complex(2,2);
+         z = new Complex(1,5);
+         w = new Complex(2,-3);
     }
 
 
@@ -32,8 +36,8 @@ public class ComplexTest {
      */
     @Test
     public void testEquals() {
+        assertEquals(a,b);
         
-        assertTrue(true);
     }
     
     /**
@@ -42,7 +46,9 @@ public class ComplexTest {
     @Test
     
     public void testSuma() {
-        assertEquals(1,1);
+        Complex res=z.suma(w);
+        Complex cor = new Complex(-1,+8);
+        assertEquals(res,cor);
     }
 
     /**

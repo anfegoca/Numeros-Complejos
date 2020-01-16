@@ -31,49 +31,48 @@ public class Complex {
             }
             return res;
         }
-	public Complex suma(Complex num1, Complex num2) {
-            double a=num1.getA()+num2.getA();
-            double b=num1.getB()+num2.getB();
+	public Complex suma(Complex num) {
+            double a=this.a+num.getA();
+            double b=this.b+num.getB();
             Complex res = new Complex(a,b);
             return res;
 	}
-	public Complex resta(Complex num1, Complex num2) {
-            double a=num1.getA()-num2.getA();
-            double b=num1.getB()-num2.getB();
+	public Complex resta(Complex num) {
+            double a=this.a-num.getA();
+            double b=this.b-num.getB();
             
             Complex res = new Complex(a,b);
             return res;
 	}
-	public Complex producto(Complex num1, Complex num2) {
-            double a=(num1.getA()*num2.getA()-num1.getB()*num2.getB());
-            double b=(num1.getA()*num2.getB()+num1.getB()*num2.getA());
+	public Complex producto(Complex num) {
+            double a=(this.a*num.getA()-this.b*num.getB());
+            double b=(this.a*num.getB()+this.b*num.getA());
             Complex res = new Complex(a,b);
             return res;
 	}
-	public Complex division(Complex num1, Complex num2) {
+	public Complex division(Complex num) {
             
-            double a=(num1.getA()*num2.getA()+num1.getB()*num2.getB())/Math.pow(modulo(num2),2);
-            double b=(num1.getB()*num2.getA()-num1.getA()*num2.getB())/Math.pow(modulo(num2),2);
+            double a=(this.a*num.getA()+this.b*num.getB())/Math.pow(num.modulo(),2);
+            double b=(this.b*num.getA()-this.a*num.getB())/Math.pow(num.modulo(),2);
             Complex res = new Complex(a,b);
             return res;
 	}
-	public double modulo(Complex num) {
-            double res = Math.sqrt(Math.pow(num.getA(), 2)+Math.pow(num.getB(), 2));
+	public double modulo() {
+            double res = Math.sqrt(Math.pow(a, 2)+Math.pow(b, 2));
             return res;
 	}
-        public Complex conjugado(Complex num){
-            double a=num.getA();
-            double b=-1*num.getB();
+        public Complex conjugado(){
+            double b=-1*this.b;
             Complex res = new Complex(a,b);
             return res;
         }
-        public double fase(Complex num){
-            return Math.atan(num.getB()/num.getA());
+        public double fase(){
+            return Math.atan(b/a);
         }
         
         public Polar polar(Complex num){
-            double r=modulo(num);
-            double ang=fase(num);
+            double r=num.modulo();
+            double ang=num.fase();
             double a=r*Math.cos(ang);
             double b=r*Math.sin(ang);
             Polar res = new Polar(a,b);
