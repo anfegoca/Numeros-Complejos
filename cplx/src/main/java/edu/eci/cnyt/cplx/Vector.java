@@ -20,12 +20,20 @@ public class Vector {
     
     @Override
     public boolean equals(Object obj){
-        boolean res = false;
-        if (dim == ((Vector)obj).getDim()){
+        boolean res = true;
+        Vector vec = (Vector)obj;
+        if (dim != vec.getDim()){
+            res = false;
+        }else{
+            Complex[] aux = vec.getNumeros();
             for(int i=0;i<dim;i++){
-                
+                if(!(aux[i].equals(numeros[i]))){
+                    res = false;
+                    break;
+                }
             }
         }
+        return res;
     }
     
     /**
@@ -33,28 +41,44 @@ public class Vector {
      * @param vector vector de complejos a sumar
      * @return vector de complejos con el resultado de la suma
      */
-    public Complex[] suma(Complex[] vector){
-        Complex[] res = new Complex[dim];
-        if (dim != vector.length) {
+    public Vector suma(Vector vec){
+        Complex[] aux = vec.getNumeros();
+        if (dim != vec.getDim()) {
             new ExcepcionDim(ExcepcionDim.mensajeDim);
         }
         else{
-            
-            for (int i=0;i<res.length;i++){
-                res[i]=numeros[i].suma(vector[i]);
+            for (int i=0;i<dim;i++){
+                aux[i]=numeros[i].suma(aux[i]);   
             }
         }
+        Vector res = new Vector(aux);
         return res;
     }
-    public Complex[] inversa(){
-        Complex[] res = new Complex[dim];
-        for (int i=0;i<res.length;i++){
-            res[i]=numeros[i].inverso();
+    /**
+     * Devuelve un vector inverso
+     * @return vector inverso
+     */
+    public Vector inversa(){
+        Complex[] aux = new Complex[dim];
+        for (int i=0;i<dim;i++){
+            aux[i]=numeros[i].inverso();
         }
+        Vector res = new Vector(aux);
         return res;
     }
+    /**
+     * Devuelve la dimension del vector
+     * @return int que representa la dimension del vector
+     */
     public int getDim(){
         return dim;
+    }
+    /**
+     * Devuelve los numeros que conforman el arreglo
+     * @return array de Complex con los numeros que conforman el vector
+     */
+    public Complex[] getNumeros(){
+        return numeros;
     }
     
 }

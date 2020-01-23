@@ -24,6 +24,7 @@ public class ComplexTest {
 
     Vector x;
     Vector y;
+    Vector v;
  
     
     @Before
@@ -32,10 +33,12 @@ public class ComplexTest {
          b = new Complex(2,2);
          z = new Complex(1,5);
          w = new Complex(2,-3);
+         Complex[] aux3 = {new Complex(16,2.3),new Complex(0,-7),new Complex(6,0),new Complex(0,-4)};
          Complex[] aux2 = {new Complex(16,2.3),new Complex(0,-7),new Complex(6,0),new Complex(0,-4)};
          Complex[] aux = {new Complex(6,-4),new Complex(7,3),new Complex(4.2,-8.1),new Complex(0,-3)};
          x = new Vector(aux);
          y = new Vector(aux2);
+         v = new Vector(aux3);
 
     }
 
@@ -46,6 +49,12 @@ public class ComplexTest {
     @Test
     public void testEquals() {
         assertEquals(a,b);
+        
+    }
+    
+    @Test
+    public void testEqualsVector() {
+        assertEquals(y,v);
         
     }
     
@@ -72,7 +81,7 @@ public class ComplexTest {
      */
     @Test
     public void testResta() {
-        assertEquals(1,1);
+        assertFalse(false);
     }
 
     /**
@@ -126,13 +135,19 @@ public class ComplexTest {
     
     @Test
     public void testSumaVector() {
-        Complex[] aux = {new Complex(22,-1.7),new Complex(7,-4),new Complex(10.2,-8.1),new Complex(0,-7)};
-        Vector res = new Vector(aux);
-        assertEquals(1,1);
+        Complex[] aux = {new Complex(22,-1.7000000000000002),new Complex(7,-4),new Complex(10.2,-8.1),new Complex(0,-7)};
+        Vector cor = new Vector(aux);
+        Vector res = x.suma(y);
+        System.out.println(res.getNumeros()[1].getA());
+        System.out.println(res.getNumeros()[1].getB());
+        assertEquals(res,cor);
     }
     
     @Test
     public void Inversavector() {
-        assertEquals(1,1);
+        Complex[] aux = {new Complex(-6,4),new Complex(-7,-3),new Complex(-4.2,8.1),new Complex(0,3)};
+        Vector cor = new Vector(aux);
+        Vector res = x.inversa();
+        assertEquals(res,cor);
     }
 }
