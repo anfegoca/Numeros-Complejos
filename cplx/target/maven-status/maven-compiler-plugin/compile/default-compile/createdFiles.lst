@@ -1,2 +1,4 @@
 edu\eci\cnyt\cplx\Complex.class
+edu\eci\cnyt\cplx\Vector.class
+edu\eci\cnyt\cplx\ExcepcionDim.class
 edu\eci\cnyt\cplx\Polar.class

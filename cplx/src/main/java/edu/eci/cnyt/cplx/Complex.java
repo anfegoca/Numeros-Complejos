@@ -69,7 +69,10 @@ public class Complex {
         public double fase(){
             return Math.atan(b/a);
         }
-        
+        public Complex inverso(){
+            Complex res = new Complex(-a,-b);
+            return res;
+        }
         public Polar polar(Complex num){
             double r=num.modulo();
             double ang=num.fase();
