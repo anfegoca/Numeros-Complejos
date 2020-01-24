@@ -10,7 +10,8 @@ package edu.eci.cnyt.cplx;
  * @author andres.gonzalez-ca
  */
 public class ExcepcionDim extends Exception{
-    public static String mensajeDim= "LOS VECTORES DEBEN SER DE LA MISMA DIMENSIÓN";
+    public static String mensajeDimVec= "LOS VECTORES DEBEN SER DE LA MISMA DIMENSIÓN";
+    public static String mensajeDimMat= "LAS MATRICES DEBEN SER DE LA MISMA DIMENSIÓN";
     
     public ExcepcionDim (String mensaje){
         super(mensaje);

@@ -44,7 +44,7 @@ public class Vector {
     public Vector suma(Vector vec){
         Complex[] aux = vec.getNumeros();
         if (dim != vec.getDim()) {
-            new ExcepcionDim(ExcepcionDim.mensajeDim);
+            new ExcepcionDim(ExcepcionDim.mensajeDimVec);
         }
         else{
             for (int i=0;i<dim;i++){
@@ -62,6 +62,14 @@ public class Vector {
         Complex[] aux = new Complex[dim];
         for (int i=0;i<dim;i++){
             aux[i]=numeros[i].inverso();
+        }
+        Vector res = new Vector(aux);
+        return res;
+    }
+    public Vector multEscalar(Complex esc){
+        Complex[] aux = new Complex[dim];
+        for(int i=0;i<dim;i++){
+            aux[i]=esc.producto(numeros[i]);
         }
         Vector res = new Vector(aux);
         return res;

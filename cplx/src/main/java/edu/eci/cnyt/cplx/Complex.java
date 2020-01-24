@@ -73,12 +73,11 @@ public class Complex {
             Complex res = new Complex(-a,-b);
             return res;
         }
-        public Polar polar(Complex num){
-            double r=num.modulo();
-            double ang=num.fase();
-            double a=r*Math.cos(ang);
-            double b=r*Math.sin(ang);
-            Polar res = new Polar(a,b);
+        public Polar polar(){
+            double r=this.modulo();
+            double ang=this.fase();
+            //System.out.println("Fase"+ang);
+            Polar res = new Polar(r,ang);
             return res;
         }
 

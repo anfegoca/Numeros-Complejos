@@ -25,7 +25,7 @@ public class ComplexTest {
     Vector x;
     Vector y;
     Vector v;
- 
+    Vector t; 
     
     @Before
     public void setUp() {
@@ -34,11 +34,13 @@ public class ComplexTest {
          z = new Complex(1,5);
          w = new Complex(2,-3);
          Complex[] aux3 = {new Complex(16,2.3),new Complex(0,-7),new Complex(6,0),new Complex(0,-4)};
+         Complex[] aux4 = {new Complex(6,3),new Complex(0,0),new Complex(5,1),new Complex(4,0)};
          Complex[] aux2 = {new Complex(16,2.3),new Complex(0,-7),new Complex(6,0),new Complex(0,-4)};
          Complex[] aux = {new Complex(6,-4),new Complex(7,3),new Complex(4.2,-8.1),new Complex(0,-3)};
          x = new Vector(aux);
          y = new Vector(aux2);
          v = new Vector(aux3);
+         t= new Vector(aux4);
 
     }
 
@@ -81,7 +83,9 @@ public class ComplexTest {
      */
     @Test
     public void testResta() {
-        assertFalse(false);
+        Complex res=z.resta(w);
+        Complex cor = new Complex(-1,8);
+        assertEquals(res,cor);
     }
 
     /**
@@ -89,7 +93,9 @@ public class ComplexTest {
      */
     @Test
     public void testProducto() {
-        assertEquals(1,1);
+        Complex res=z.producto(w);
+        Complex cor = new Complex(17,7);
+        assertEquals(res,cor);
     }
 
     /**
@@ -97,7 +103,9 @@ public class ComplexTest {
      */
     @Test
     public void testDivision() {
-        assertEquals(1,1);
+        Complex res=z.division(w);
+        Complex cor = new Complex(-1.0000000000000002,1.0000000000000002);
+        assertEquals(res,cor);
     }
 
     /**
@@ -105,7 +113,14 @@ public class ComplexTest {
      */
     @Test
     public void testModulo() {
-        assertEquals(1,1);
+        boolean res2=false;
+        double res=z.modulo();
+        double cor=5.0990195135927845;
+        if(res==cor){
+            res2=true;
+        }
+        assertTrue(res2);
+        
     }
 
     /**
@@ -113,7 +128,9 @@ public class ComplexTest {
      */
     @Test
     public void testConjugado() {
-        assertEquals(1,1);
+        Complex res=z.conjugado();
+        Complex cor = new Complex(1,-5);
+        assertEquals(res,cor);
     }
 
     /**
@@ -121,7 +138,13 @@ public class ComplexTest {
      */
     @Test
     public void testFase() {
-        assertEquals(1,1);
+        boolean res2=false;
+        double res=z.fase();
+        double cor=1.373400766945016;
+        if(res==cor){
+            res2=true;
+        }
+        assertTrue(res2);
     }
 
     /**
@@ -129,7 +152,11 @@ public class ComplexTest {
      */
     @Test
     public void testPolar() {
-        assertEquals(1,1);
+        Polar res=z.polar();
+        Polar cor=new Polar(5.0990195135927845,1.373400766945016);
+        //System.out.println("Hola"+res.getA());
+        //System.out.println("HOLA"+res.getB());
+        assertEquals(res,cor);
     }
     
     
@@ -138,16 +165,23 @@ public class ComplexTest {
         Complex[] aux = {new Complex(22,-1.7000000000000002),new Complex(7,-4),new Complex(10.2,-8.1),new Complex(0,-7)};
         Vector cor = new Vector(aux);
         Vector res = x.suma(y);
-        System.out.println(res.getNumeros()[1].getA());
-        System.out.println(res.getNumeros()[1].getB());
+        //System.out.println(res.getNumeros()[1].getA());
+        //System.out.println(res.getNumeros()[1].getB());
         assertEquals(res,cor);
     }
     
     @Test
-    public void Inversavector() {
+    public void InversaVector() {
         Complex[] aux = {new Complex(-6,4),new Complex(-7,-3),new Complex(-4.2,8.1),new Complex(0,3)};
         Vector cor = new Vector(aux);
         Vector res = x.inversa();
+        assertEquals(res,cor);
+    }
+    @Test
+    public void testMultEscalar() {
+        Complex[] aux = {new Complex(12,21),new Complex(0,0),new Complex(13,13),new Complex(12,8)};
+        Vector cor = new Vector(aux);
+        Vector res = t.multEscalar(new Complex(3,2));
         assertEquals(res,cor);
     }
 }
