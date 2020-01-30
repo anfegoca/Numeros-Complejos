@@ -75,14 +75,7 @@ public class ComplexTest {
     
     public void testSuma() {
         Complex res=z.suma(w);
-        //Complex res2= new Complex(1,0).producto(new Complex(3,-4));
-        //Complex res3= new Complex(0,2).producto(new Complex(-1,0));
-        //res2 = res2.suma(res3);
- 
-        
         Complex cor = new Complex(3,2);
-        //System.out.println("Hola"+res2.getA());
-        //System.out.println("HOLA"+res2.getB());
         assertEquals(res,cor);
     }
 
@@ -162,8 +155,6 @@ public class ComplexTest {
     public void testPolar() {
         Polar res=z.polar();
         Polar cor=new Polar(5.0990195135927845,1.373400766945016);
-        //System.out.println("Hola"+res.getA());
-        //System.out.println("HOLA"+res.getB());
         assertEquals(res,cor);
     }
     
@@ -173,8 +164,6 @@ public class ComplexTest {
         Complex[] aux = {new Complex(22,-1.7000000000000002),new Complex(7,-4),new Complex(10.2,-8.1),new Complex(0,-7)};
         Vector cor = new Vector(aux);
         Vector res = x.suma(y);
-        //System.out.println(res.getNumeros()[1].getA());
-        //System.out.println(res.getNumeros()[1].getB());
         assertEquals(res,cor);
     }
     
