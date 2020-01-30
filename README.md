@@ -1,2 +1,2 @@
 # Numeros-Complejos
-![Texto alternativo](/ruta/a/la/imagen.jpg)
+![Texto alternativo](https://github.com/anfegoca/Numeros-Complejos/blob/master/1.png)
