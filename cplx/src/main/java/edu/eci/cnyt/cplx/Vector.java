@@ -38,7 +38,7 @@ public class Vector {
     
     /**
      * Suma de vectores complejos
-     * @param vector vector de complejos a sumar
+     * @param vec vector de complejos a sumar
      * @return vector de complejos con el resultado de la suma
      */
     public Vector suma(Vector vec){
