@@ -112,7 +112,7 @@ public class Complex {
          * @return fase del numero de tipo double
          */
         public double fase(){
-            return Math.atan(b/a);
+            return Math.atan2(b,a);
         }
         /**
          * Realiza el inverso del numero
