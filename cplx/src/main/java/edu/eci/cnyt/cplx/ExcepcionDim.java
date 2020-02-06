@@ -12,7 +12,7 @@ package edu.eci.cnyt.cplx;
 public class ExcepcionDim extends Exception{
     public static String mensajeDimVec= "LOS VECTORES DEBEN SER DE LA MISMA DIMENSIÓN";
     public static String mensajeDimMat= "LAS MATRICES DEBEN SER DE LA MISMA DIMENSIÓN";
-    
+    public static String mensajeDimMatPro="LAS MATRICES NO SE PUEDEN MULTIPLICAR";
     public ExcepcionDim (String mensaje){
         super(mensaje);
     }

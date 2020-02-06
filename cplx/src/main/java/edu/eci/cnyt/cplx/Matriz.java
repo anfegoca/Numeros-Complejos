@@ -95,6 +95,27 @@ public class Matriz {
         Matriz res = new Matriz(aux);
         return res;
     }
+    public Matriz adjunta(){
+        Matriz res = this.transpuesta();
+        res = res.conjugada();
+        return res;
+    }
+    public Matriz producto(Matriz mat){
+        if(mat.getN()!=n){
+            new ExcepcionDim(ExcepcionDim.mensajeDimMatPro);
+        }else{
+            Complex[][] aux = new Complex [m][mat.getN()];
+            Complex[][] aux2 = mat.getNumeros();
+            for(int i=0; i<m;i++){
+                Complex suma=new Complex(0,0);
+                for(int j=0; j<mat.getN(); j++){
+                    aux[i][j]=suma.suma(numeros[i][j].producto(aux2[j][i]));
+                }
+                
+            }
+        }
+        
+    }
     public int getN(){
         return n;  
     }
