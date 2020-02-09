@@ -27,8 +27,7 @@ public class ComplexTest {
     Vector v;
     Vector t;
     
-    Matriz mat1;
-    Matriz mat2;
+    
     
     @Before
     public void setUp() {
@@ -44,10 +43,7 @@ public class ComplexTest {
          y = new Vector(aux2);
          v = new Vector(aux3);
          t= new Vector(aux4);
-         Complex[][] m1 = {{new Complex(1,1),new Complex(0,-2)},{new Complex(3,-5),new Complex(4,0)}};
-         Complex[][] m2 = {{new Complex(0,2),new Complex(1,1)},{new Complex(-1,-1),new Complex(0,0)}};
-         mat1 = new Matriz(m1);
-         mat2 = new Matriz(m2);
+         
          
          
     }
@@ -181,42 +177,4 @@ public class ComplexTest {
         Vector res = t.multEscalar(new Complex(3,2));
         assertEquals(res,cor);
     }
-    @Test
-    public void sumaMatriz() {
-        Complex[][] m = {{new Complex(1,3),new Complex(1,-1)},{new Complex(2,-6),new Complex(4,0)}};
-        Matriz cor = new Matriz(m);
-        Matriz res = mat1.suma(mat2);
-        assertEquals(res,cor);
-    }
-    @Test
-    public void InversaMatriz() {
-        Complex[][] m = {{new Complex(-1,-1),new Complex(0,2)},{new Complex(-3,5),new Complex(-4,0)}};
-        Matriz cor = new Matriz(m);
-        Matriz res = mat1.inversa();
-        assertEquals(res,cor);
-    }
-    @Test
-    public void productoEscalarMatriz() {
-        Complex[][] m = {{new Complex(5,5),new Complex(0,-10)},{new Complex(15,-25),new Complex(20,0)}};
-        Matriz cor = new Matriz(m);
-        Matriz res = mat1.productoEsca(new Complex(5,0));
-        assertEquals(res,cor);
-    }
-    @Test
-    public void MatrizTranspuesta() {
-        
-        Complex[][] m = {{new Complex(1,1),new Complex(3,-5)},{new Complex(0,-2),new Complex(4,0)}};
-        Matriz cor = new Matriz(m);
-        Matriz res = mat1.transpuesta();
-        assertEquals(res,cor);
-    }
-    @Test
-    public void MatrizConjugada() {
-        Complex[][] m = {{new Complex(1,-1),new Complex(0,2)},{new Complex(3,5),new Complex(4,0)}};
-        Matriz cor = new Matriz(m);
-        Matriz res = mat1.conjugada();
-        assertEquals(res,cor);
-    }
-    
-    
 }

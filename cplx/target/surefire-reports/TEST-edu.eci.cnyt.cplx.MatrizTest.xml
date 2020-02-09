@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="13" failures="0" name="edu.eci.cnyt.cplx.ComplexTest" time="0.007" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="edu.eci.cnyt.cplx.MatrizTest" time="0.025" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
@@ -15,7 +15,7 @@
     <property name="user.country" value="CO"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
-    <property name="test" value="ComplexTest"/>
+    <property name="test" value="MatrizTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\Imac\Documents\Numeros-Complejos\cplx"/>
     <property name="java.runtime.version" value="1.8.0_231-b11"/>
@@ -47,7 +47,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_231\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=ComplexTest test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=MatrizTest test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="es"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -66,17 +66,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testMultEscalar" time="0.005"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="InversaVector" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testPolar" time="0.001"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testResta" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testFase" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testSuma" time="0.001"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testProducto" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testConjugado" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testEqualsVector" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testSumaVector" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testDivision" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testEquals" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testModulo" time="0"/>
+  <testcase classname="edu.eci.cnyt.cplx.MatrizTest" name="MatrizTranspuesta" time="0.004"/>
+  <testcase classname="edu.eci.cnyt.cplx.MatrizTest" name="InversaMatriz" time="0"/>
+  <testcase classname="edu.eci.cnyt.cplx.MatrizTest" name="MatrizConjugada" time="0"/>
+  <testcase classname="edu.eci.cnyt.cplx.MatrizTest" name="productoMatriz" time="0.021"/>
+  <testcase classname="edu.eci.cnyt.cplx.MatrizTest" name="productoEscalarMatriz" time="0"/>
+  <testcase classname="edu.eci.cnyt.cplx.MatrizTest" name="sumaMatriz" time="0"/>
 </testsuite>

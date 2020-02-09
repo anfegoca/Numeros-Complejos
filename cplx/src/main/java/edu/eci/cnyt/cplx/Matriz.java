@@ -101,19 +101,26 @@ public class Matriz {
         return res;
     }
     public Matriz producto(Matriz mat){
+        Matriz res=null;
         if(mat.getN()!=n){
             new ExcepcionDim(ExcepcionDim.mensajeDimMatPro);
         }else{
             Complex[][] aux = new Complex [m][mat.getN()];
             Complex[][] aux2 = mat.getNumeros();
             for(int i=0; i<m;i++){
-                Complex suma=new Complex(0,0);
                 for(int j=0; j<mat.getN(); j++){
-                    aux[i][j]=suma.suma(numeros[i][j].producto(aux2[j][i]));
-                }
-                
+                    Complex suma=new Complex(0,0);
+                    for(int k=0;k<n;k++){
+                        suma=suma.suma(numeros[i][k].producto(aux2[k][j]));
+                        System.out.println("SUMA A"+suma.getA());
+                        System.out.println("SUMA B"+suma.getB());
+                    }
+                    aux[i][j]=suma;
+                }   
             }
+            res=new Matriz(aux);
         }
+        return res;
         
     }
     public int getN(){
