@@ -112,8 +112,6 @@ public class Matriz {
                     Complex suma=new Complex(0,0);
                     for(int k=0;k<n;k++){
                         suma=suma.suma(numeros[i][k].producto(aux2[k][j]));
-                        System.out.println("SUMA A"+suma.getA());
-                        System.out.println("SUMA B"+suma.getB());
                     }
                     aux[i][j]=suma;
                 }   
@@ -122,6 +120,13 @@ public class Matriz {
         }
         return res;
         
+    }
+    public Matriz accionMatrizVector(Vector v){
+        Complex[][] mat = {v.getNumeros()};
+        Matriz aux = new Matriz(mat);
+        aux = aux.transpuesta();
+        Matriz res = this.producto(aux); 
+        return res;
     }
     public int getN(){
         return n;  

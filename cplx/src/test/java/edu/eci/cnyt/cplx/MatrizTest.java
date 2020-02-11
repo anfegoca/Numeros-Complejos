@@ -84,5 +84,26 @@ public class MatrizTest {
         */
         assertEquals(res,cor);
     }
+    @Test
+    public void accionMatrizVector() {
+        Complex[][] matr1 = {{new Complex(1,4),new Complex(7,-1),new Complex(0,1)},{new Complex(4,0),new Complex(7,-1),new Complex(4,0)},{new Complex(0,1),new Complex(4,0),new Complex(5,6)}};
+        Complex[] vec2 = {new Complex(5,6),new Complex(0,1),new Complex(7,-1)};
+        Matriz matriz1 = new Matriz(matr1);
+        Vector vector2 = new Vector(vec2);
+        Complex[][] m = {{new Complex(-17,4),new Complex(49,27),new Complex(35,46)}};
+        Matriz cor = new Matriz(m);
+        Matriz res = matriz1.accionMatrizVector(vector2);
+        /*
+        Complex[][] aux = res.getNumeros();
+        for(int i=0;i<res.getM();i++){
+            for(int j=0;j<res.getN();j++){
+                System.out.println("i "+i+" j "+j+" valor "+aux[i][j].getA()+" "+aux[i][j].getB());
+            }
+        }
+        System.out.println();
+       
+        */
+        assertEquals(res,cor);
+    }
     
 }
