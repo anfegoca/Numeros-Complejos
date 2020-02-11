@@ -77,11 +77,17 @@ public class Matriz {
     }
     public Matriz transpuesta(){
         Complex[][] aux = new Complex[n][m];
+        System.out.println("N"+n+"M"+m);
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
-                aux[i][j]=numeros[j][i];    
+                
+
+                aux[i][j]=numeros[j][i];
+                System.out.println("HOLA");
+                System.out.println(aux[i][j].getA()+","+aux[i][j].getB());
             }
         }
+        
         Matriz res = new Matriz(aux);
         return res;
     }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="13" failures="0" name="edu.eci.cnyt.cplx.ComplexTest" time="0.015" errors="0" skipped="0">
+<testsuite tests="13" failures="0" name="edu.eci.cnyt.cplx.ComplexTest" time="0.012" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
@@ -65,16 +65,16 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testMultEscalar" time="0.006"/>
+  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testMultEscalar" time="0.005"/>
   <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="InversaVector" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testPolar" time="0.005"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testResta" time="0.001"/>
+  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testPolar" time="0.001"/>
+  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testResta" time="0"/>
   <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testFase" time="0"/>
   <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testSuma" time="0.001"/>
   <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testProducto" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testConjugado" time="0"/>
+  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testConjugado" time="0.001"/>
   <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testEqualsVector" time="0"/>
-  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testSumaVector" time="0.002"/>
+  <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testSumaVector" time="0.004"/>
   <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testDivision" time="0"/>
   <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testEquals" time="0"/>
   <testcase classname="edu.eci.cnyt.cplx.ComplexTest" name="testModulo" time="0"/>

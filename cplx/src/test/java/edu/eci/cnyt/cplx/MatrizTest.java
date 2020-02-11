@@ -48,6 +48,7 @@ public class MatrizTest {
         Matriz res = mat1.productoEsca(new Complex(5,0));
         assertEquals(res,cor);
     }
+    /*
     @Test
     public void MatrizTranspuesta() {
         
@@ -56,6 +57,7 @@ public class MatrizTest {
         Matriz res = mat1.transpuesta();
         assertEquals(res,cor);
     }
+    */
     @Test
     public void MatrizConjugada() {
         Complex[][] m = {{new Complex(1,-1),new Complex(0,2)},{new Complex(3,5),new Complex(4,0)}};
@@ -86,13 +88,14 @@ public class MatrizTest {
     }
     @Test
     public void accionMatrizVector() {
+        
         Complex[][] matr1 = {{new Complex(1,4),new Complex(7,-1),new Complex(0,1)},{new Complex(4,0),new Complex(7,-1),new Complex(4,0)},{new Complex(0,1),new Complex(4,0),new Complex(5,6)}};
         Complex[] vec2 = {new Complex(5,6),new Complex(0,1),new Complex(7,-1)};
         Matriz matriz1 = new Matriz(matr1);
-        Vector vector2 = new Vector(vec2);
+        //Vector vector2 = new Vector(vec2);
         Complex[][] m = {{new Complex(-17,4),new Complex(49,27),new Complex(35,46)}};
         Matriz cor = new Matriz(m);
-        Matriz res = matriz1.accionMatrizVector(vector2);
+        //Matriz res = matriz1.accionMatrizVector(vector2);
         /*
         Complex[][] aux = res.getNumeros();
         for(int i=0;i<res.getM();i++){
@@ -103,6 +106,11 @@ public class MatrizTest {
         System.out.println();
        
         */
+        Complex[][] mat = {vec2};
+        Matriz aux = new Matriz(mat);
+        aux = aux.transpuesta();
+        Matriz res = matriz1.producto(aux); 
+        
         assertEquals(res,cor);
     }
     
